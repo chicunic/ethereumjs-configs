@@ -1,0 +1,2 @@
+# ethereumjs-configs
+EthereumJS configs

@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@ethereumjs/client": "^0.10.1"
+	}
+}

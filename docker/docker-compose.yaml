@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  ethereumjs:
+    image: asia-northeast1-docker.pkg.dev/alpha-dev-402413/ethereumjs/ethereumjs:latest
+    container_name: ethereumjs
+    volumes:
+      - /data/ethereumjs/datadir:/datadir:rw
+      - /data/ethereumjs/custom:/custom:ro
+    command: >
+      --dataDir=/datadir
+      --discDns=false
+      --discV4=false
+      --gethGenesis=/custom/genesis.json
+      --mine=true
+      --unlock=/custom/minerKey.txt
+      --rpc
+    network_mode: host
